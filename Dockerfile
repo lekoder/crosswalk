@@ -25,7 +25,7 @@ RUN echo "\033[0;34m*** Installing android build targets\033[0m" \
 &&  echo "y" | android update sdk -u -a -t 1,2,3,4,5,6,7,8,9,10,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,128,129,130,131,132,134,135,136,137 \
 &&  cd /android-sdk-linux/ && unzip -q temp/tools_r25.2.2-linux.zip
 
-RUN apt-get install libav-tools
+RUN apt-get install -y libav-tools
 
 WORKDIR /app
 CMD ["crosswalk-pkg","help"]
